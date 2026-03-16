@@ -1,6 +1,6 @@
 package ro.uvt.fi.dp;
 
-import java.util.logging.Logger; //imporing the logger
+import java.util.logging.Logger; //importing the logger
 
 public class Account implements Operations, Transfer {
 
@@ -11,7 +11,7 @@ public class Account implements Operations, Transfer {
 	String accountCode = null; //IBAN
 	double amount = 0;
 	Account.TYPE type = Account.TYPE.RON;
-	private static final Logger logger = Logger.getLogger(Account.class.getName()); //declaring the logger
+	private static final Logger logger = SingletonLogger.getInstance().getLogger(); //declaring the logger
 
 	protected Account(String accountCode, double amount, Account.TYPE type) {
 		this.accountCode = accountCode;

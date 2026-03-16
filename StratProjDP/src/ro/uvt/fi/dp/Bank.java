@@ -9,7 +9,7 @@ public class Bank {
 	private Client clients[];
 	private int clientsNumber;
 	private String bankCode = null;
-	private static final Logger logger = Logger.getLogger(Bank.class.getName()); //added a logger field
+	private static final Logger logger = SingletonLogger.getInstance().getLogger(); //changed from multiple loggers to Singleton Logger
 
 	public Bank(String codBanca) {
 		this.bankCode = codBanca;
