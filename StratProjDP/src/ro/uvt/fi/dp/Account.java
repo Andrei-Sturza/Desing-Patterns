@@ -72,4 +72,9 @@ public class Account implements Operations, Transfer {
 		}
 	}
 
+	public void accept(AccountVisitor visitor)
+	{
+		visitor.visit(this);
+	}
+
 }
